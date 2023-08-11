@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "what is the commit meassage ?"
+echo "commit message is ?"
 read v
 git add .
 git commit -m"$v"
