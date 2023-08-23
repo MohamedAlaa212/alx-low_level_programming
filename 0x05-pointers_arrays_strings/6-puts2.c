@@ -1,33 +1,19 @@
 #include "main.h"
 
 /**
- * puts_half - print half of string
- * @str: pointer string
+ * puts2 - print even charcter of string
+ * @str: pointer
  * Return: void
  */
-void puts_half(char *str)
+void puts2(char *str)
 {
-	int count, i;
+	int count = 0;
 
-	for (count = 0; (*(str + count)) != '\0'; count++)
-		;
-	if (count % 2 == 0)
+	while ((*(str + count)) != '\0')
 	{
-		i = count / 2;
-		while ((*(str + i)) != '\0')
-		{
-			_putchar(*(str + i));
-			i++;
-		}
-	}
-	else
-	{
-		i = count / 2 + 1;
-		while ((*(str + i)) != '\0')
-		{
-			_putchar(*(str + i));
-			i++;
-		}
+		if (count % 2 == 0)
+			_putchar(*(str + count));
+		count++;
 	}
 	_putchar('\n');
 }
